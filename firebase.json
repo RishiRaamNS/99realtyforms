@@ -1,0 +1,62 @@
+{
+  "hosting": {
+    "public": "build",
+    "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
+    "rewrites": [
+      {
+        "source": "/1/**",
+        "destination": "/index.html"
+      },
+      {
+        "source": "/2/**",
+        "destination": "/index.html"
+      },
+      {
+        "source": "/3/**",
+        "destination": "/index.html"
+      },
+      {
+        "source": "/4/**",
+        "destination": "/index.html"
+      },
+      {
+        "source": "/5/**",
+        "destination": "/index.html"
+      },
+      {
+        "source": "/6/**",
+        "destination": "/index.html"
+      },
+      {
+        "source": "/7/**",
+        "destination": "/index.html"
+      },
+      {
+        "source": "/8/**",
+        "destination": "/index.html"
+      },
+      {
+        "source": "/9/**",
+        "destination": "/index.html"
+      },
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  },
+  "functions": [
+    {
+      "source": "functions",
+      "codebase": "default",
+      "ignore": [
+        "node_modules",
+        ".git",
+        "firebase-debug.log",
+        "firebase-debug.*.log",
+        "*.local"
+      ],
+      "predeploy": ["npm --prefix \"$RESOURCE_DIR\" run lint"]
+    }
+  ]
+}
