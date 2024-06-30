@@ -4,8 +4,8 @@ const cors = require("cors")({origin: true});
 const transporter = nodemailer.createTransport({
   service: "gmail",
   auth: {
-    user: "rishiraamns@gmail.com",
-    pass: "niet tsae siiu jyct",
+    user: "genriotesting@gmail.com",
+    pass: "eefu gaev bwre aiua",
   },
 });
 exports.submitform = functions.https.onRequest(async (req, res) => {
@@ -25,7 +25,7 @@ exports.submitform = functions.https.onRequest(async (req, res) => {
         data = data.replace(/\\r/g, "");
         const mailOptions = {
           from: "rishiraamns@gmail.com",
-          to: "tamizhselvangt@gmail.com",
+          to: "sebe2k04@gmail.com",
           subject: "New Form Submission",
           text: data,
         };

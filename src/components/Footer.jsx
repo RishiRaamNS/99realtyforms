@@ -3,10 +3,10 @@ import Image from "next/image";
 
 function Footer({ btn, onButtonClick }) {
   return (
-    <div className="absolute z-10 bottom-0 left-0 w-screen h-28 overflow-hidden">
+    <div className="absolute z-[10] bottom-0 left-0 min-h-[150px] w-full overflow-hidden">
       <button onClick={onButtonClick} className="inline">
         <Image
-          src="/bus.png"
+          src="/bus2.png"
           alt="bus"
           width={120}
           height={120}
