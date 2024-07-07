@@ -42,18 +42,21 @@ function Page4() {
     <Suspense fallback={<SearchBarFallback />}>
       <Layout>
         <div
-          className={`relative h-[90vh] ${
+          className={`relative h-[95vh] ${
             previous === "5" ? "animate-moveFromLeft" : "animate-moveFromRight"
           } ${isForward ? "animate-moveToLeft" : " "} ${
             isBackward ? "animate-moveToRight" : " "
           }`}
         >
-          <button onClick={handleBackButtonClick}>
-            <IoIosArrowBack fontSize={25} className=" mb-4 ml-4" />
+          <button
+            onClick={handleBackButtonClick}
+            className="absolute z-[5] lg:top-[35%] p-2 lg:bg-white/50 lg:rounded-full left-2 top-5 lg:left-10"
+          >
+            <IoIosArrowBack fontSize={25} className="" />
           </button>
-
+          <div className="pt-20 lg:pt-0"></div>
           <Content image="/character4.png" />
-          <div className="my-5 flex flex-col justify-center items-center">
+          <div className="my-5 flex flex-col justify-center items-center relative z-[2]">
             <h1 className="text-white font-bold text-xl text-center px-6">
               Preferred Location?
             </h1>
@@ -66,7 +69,7 @@ function Page4() {
                   name="City"
                   value={formData.City}
                   onChange={handleChange}
-                  className="mt-5 p-3 rounded-lg font-bold text-[#A9A9A9] pl-3"
+                  className="mt-5 p-3 rounded-lg font-bold text-[#A9A9A9] pl-3 focus:outline-none"
                 />
                 <input
                   type="text"
@@ -74,19 +77,27 @@ function Page4() {
                   name="Street"
                   value={formData.Street}
                   onChange={handleChange}
-                  className="mt-5 p-3 rounded-lg font-bold text-[#A9A9A9] pl-3"
+                  className="mt-5 p-3 rounded-lg font-bold text-[#A9A9A9] pl-3 focus:outline-none"
                 />
               </div>
             </form>
           </div>
           <Image
-            src="/buildings.png"
+            src="/rounds.png"
+            alt="rounds"
+            width={200}
+            height={200}
+            className=" m-auto absolute lg:top-[20px] top-[90px] lg:left-[43%] left-[23%]"
+          />
+          <Image
+            src="/buildimg.png"
             alt="buildings"
             width={50}
             height={50}
-            className="w-screen absolute bottom-6 left-0 opacity-65"
+            className="w-screen absolute h-[200px] lg:h-[150px] object-cover bottom-6 left-0  mb-[50px]"
           />
         </div>
+        <div className="pt-[10px]"></div>
         <Footer onButtonClick={handleButtonClick} btn="Next" />
       </Layout>
     </Suspense>

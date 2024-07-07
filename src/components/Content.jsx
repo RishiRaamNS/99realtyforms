@@ -2,7 +2,7 @@ import React from 'react'
 import Image from 'next/image';
 function Content({image}) {
   return (
-    <div className="relative">
+    <div className="relative z-[5]  mt-[-100px]">
       <Image
         src="/round1.png"
         alt="round1"
@@ -17,6 +17,7 @@ function Content({image}) {
         height={150}
         className="mx-auto absolute left-[50%] -translate-x-[50%] -translate-y-[115%]"
       />
+      
       <Image
         src={image}
         alt="character 1"
@@ -24,6 +25,7 @@ function Content({image}) {
         height={200}
         className="mx-auto absolute left-[50%] -translate-x-[50%] -translate-y-[100%]"
       />
+      
     </div>
   );
 }

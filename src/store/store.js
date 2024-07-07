@@ -21,6 +21,7 @@ const formSlice = createSlice({
 export const { updateFormData } = formSlice.actions;
 
 export default configureStore({
+  devTools:true,
   reducer: {
     form: formSlice.reducer,
   },
